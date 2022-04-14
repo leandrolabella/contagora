@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background-color: #18D5FE;
+}
+
+.alerta-sucesso{
+    padding: 10px;
+    background-color: #04AA6D;
+    color: white;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.alerta-erro{
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.alerta-close{
+    margin-left: 15px;
+    color: white;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alerta-close:hover{
+    color: black;
+}
+
+.topo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+    height: 72px;
+    margin-top: 13px;
+}
+
+.topo-imagem{
+    height: 58px;
+}
+
+.topo-menu{
+    display: flex;
+    gap: 25px;
+}
+
+.topo-menu-item{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.topo-menu-item-selecionado{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.topo-menu-botao{
+    width: 69px;
+    height: 22px;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    background: #FFFFFF;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.topo-menu-botao:hover, .corpo-principal-botao:hover, .modal-botao-submit:hover, .modal-botao-cadastrar:hover{
+    background-color: rgb(197, 190, 190);
+}
+
+.modal{
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.26);
+    animation: animatezoom 0.6s;
+}
+@keyframes animatezoom{from{transform:scale(0)} to {transform:scale(1)}}
+
+.modal-content{
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px;
+}
+
+.modal-texto{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.modal-input{
+    margin-bottom: 16px;
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    font-family: 'Rubik';
+    border: 1px solid #ccc;
+}
+
+.modal-botao-cadastrar{
+    padding: 8px 16px;
+    overflow: hidden;
+    background-color: inherit;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    display: block; 
+    width: 100%;
+    border: 1px solid #2196F3;
+    background-color: #fff;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #2196F3;
+}
+
+.modal-botao-fechar{
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: inherit;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.modal-botao-fechar:hover{
+    color: #fff;
+    background-color: #f44336;
+}
+
+.linha-principal{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 0px;
+    border: 1px solid #32B5FF;
+}
+
+.linha-secundaria{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    border: 1px solid #32B5FF;
+}
+
+.corpo{
+    /*border-top: 0.4px solid #32B5FF;*/
+    padding-top: 32px;
+}
+
+.corpo-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.corpo-principal-div{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.corpo-principal-titulo{
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 36px;
+    color: #3D3D3D;
+}
+
+.corpo-principal-subtitulo{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 15px;
+    color: #3a3a3a;
+}
+
+.corpo-principal-botao{
+    background: #FFFFFF;
+    width: 109px;
+    height: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+
+.corpo-secundario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 48px;
+}
+
+.corpo-secundario-titulo{
+    padding-top: 2px;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.corpo-secundario-paragrafo{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #3A3A3A;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-top: 8px;
+    justify-content: center;
+}
+
+.footer-item{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 11px;
+    color: #000000;
+}

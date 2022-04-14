@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="customcss/custom.css">
+</head>
+
+<body>
+    <div class="alerta-erro" role="alert" th:if="${not #strings.isEmpty(msg1)}">
+        <span th:text="${msg1}"></span>
+        <span class="alerta-close" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+    <div class="alerta-sucesso" role="alert" th:if="${not #strings.isEmpty(msg2)}">
+        <span th:text="${msg2}"></span>
+        <span class="alerta-close" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+</body>
+
+</html>

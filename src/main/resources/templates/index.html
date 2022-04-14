@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tenha o controle das suas contas.">
+    <link rel="stylesheet" href="customcss/custom.css">
+    <title>Contagora - Controle suas contas</title>
+</head>
+
+<body>
+    <header class="topo">
+        <img class="topo-imagem" src="customcss/logo.svg" alt="Logo do projeto">
+        <nav class="topo-menu">
+            <a class="topo-menu-item-selecionado">Ínicio</a>
+            <a class="topo-menu-item">Sobre nós</a>
+            <a class="topo-menu-item" href="/aplicativo">Aplicativo</a>
+            <a href="/login"><button class="topo-menu-botao">Login</button></a>
+        </nav>
+        <div id="id02" class="modal">
+            <div class="modal-content" style="max-width:600px">
+                <div style="text-align:center"><br>
+                    <span onclick="document.getElementById('id02').style.display='none'" class="modal-botao-fechar"
+                        title="Fechar">&times;</span>
+                    <img src="customcss/registro.png" alt="Avatar" style="width:15%;margin-top:16px">
+                </div>
+                <th:block th:include="msg_erro"></th:block>
+                <form style="padding:0.01em 16px" method="post">
+                    <div style="margin-top:16px;margin-bottom:16px">
+                        <p class="modal-texto">Nome</p>
+                        <input class="modal-input" type="text" placeholder="Informe seu primeiro nome" name="firstName"
+                            required>
+                        <p class="modal-texto">Sobrenome</p>
+                        <input class="modal-input" type="text" placeholder="Informe seu sobrenome" name="lastName"
+                            required>
+                        <p class="modal-texto">E-mail</p>
+                        <input class="modal-input" type="email" placeholder="Informe seu e-mail" name="email" required>
+                        <p class="modal-texto">Senha</p>
+                        <input class="modal-input" type="password" placeholder="Informe sua senha" name="password"
+                            minlength="8" required>
+                        <button name="registerUser" class="modal-botao-cadastrar" type="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <hr class="linha-principal">
+    <main class="corpo">
+        <section class="corpo-principal">
+            <div class="corpo-principal-div">
+                <h1 class="corpo-principal-titulo">Contagora</h1>
+                <h2 class="corpo-principal-subtitulo">Pare de se perder na hora de pagar as contas do mês</h2>
+                <button class="corpo-principal-botao"
+                    onclick="document.getElementById('id02').style.display='block'">Começar</button>
+            </div>
+            <img>
+        </section>
+        <hr class="linha-secundaria">
+        <section class="corpo-secundario">
+            <h3 class="corpo-secundario-titulo">Como funciona?</h3>
+            <p class="corpo-secundario-paragrafo">1. Crie sua conta contagora</p>
+            <p class="corpo-secundario-paragrafo">2. Registre suas compras</p>
+            <p class="corpo-secundario-paragrafo">3. Tenha um dashboard das contas que precisa pagar</p>
+            <p class="corpo-secundario-paragrafo">4. Nunca mais atrase uma conta por esquecimento</p>
+        </section>
+    </main>
+    <hr class="linha-principal">
+    <footer class="footer">
+        <img class="footer-item" src="customcss/github.svg" alt="Logo do github">
+        <a class="footer-item" href="https://github.com/leandrolabella" target="_blank">github.com/leandrolabella</a>
+    </footer>
+</body>
+
+</html>
